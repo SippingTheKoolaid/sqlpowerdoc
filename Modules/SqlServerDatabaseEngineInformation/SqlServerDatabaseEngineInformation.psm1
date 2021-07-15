@@ -23,18 +23,20 @@ New-Object -TypeName System.Version -ArgumentList '11.0.0.0' | New-Variable -Nam
 New-Object -TypeName System.Version -ArgumentList '12.0.0.0' | New-Variable -Name SQLServer2014 -Scope Script -Option Constant
 New-Object -TypeName System.Version -ArgumentList '13.0.0.0' | New-Variable -Name SQLServer2016 -Scope Script -Option Constant
 New-Object -TypeName System.Version -ArgumentList '14.0.0.0' | New-Variable -Name SQLServer2017 -Scope Script -Option Constant
+New-Object -TypeName System.Version -ArgumentList '15.0.0.0' | New-Variable -Name SQLServer2019 -Scope Script -Option Constant
 
 New-Variable -Name StandaloneDbEngine -Scope Script -Option Constant -Value 'Standalone'
 New-Variable -Name AzureDbEngine -Scope Script -Option Constant -Value 'Windows Azure SQL Database'
 
 
 # SMO Major Versions
-# 9	:	SQL 2005
+# 9:	SQL 2005
 # 10:	SQL 2008 & 2008 R2 
 # 11:	SQL 2012
 # 12:	SQL 2014
 # 13:	SQL 2016
 # 14:	SQL 2017
+# 15:   SQL 2019
 
 # Used to compare against dates\times
 [DateTime]'01/01/0001 12:00:00 AM' | New-Variable -Name SmoEpoch -Scope Script -Option Constant
@@ -2971,7 +2973,7 @@ function Get-FullTextLanguageValue($Language) {
 			1041 { 'Japanese'}
 			1042 { 'Korean'}
 			1043 { 'Dutch'}
-			1044 { 'Bokmål'}
+			1044 { 'BokmÃ¥l'}
 			1045 { 'Polish'}
 			1046 { 'Brazilian'}
 			1048 { 'Romanian'}
@@ -3214,7 +3216,7 @@ function Get-LanguageValue($Language) {
 			30 { 'Simplified Chinese'}
 			31 { 'Arabic'}
 			32 { 'Thai'}
-			33 { 'Bokmål'} 
+			33 { 'BokmÃ¥l'} 
 			$null {$null}
 			default {'Unknown'} 
 		}
